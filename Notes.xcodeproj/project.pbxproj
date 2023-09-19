@@ -20,6 +20,8 @@
 		718F5B242AB9B6CD00E51554 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 718F5B232AB9B6CD00E51554 /* FirebaseDatabase */; };
 		718F5B262AB9B6CD00E51554 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 718F5B252AB9B6CD00E51554 /* FirebaseDatabaseSwift */; };
 		718F5B282AB9B6CD00E51554 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 718F5B272AB9B6CD00E51554 /* FirebaseFirestore */; };
+		718F5B2D2AB9BD7300E51554 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718F5B2C2AB9BD7300E51554 /* TableViewCell.swift */; };
+		718F5B2F2AB9BFF800E51554 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 718F5B2E2AB9BFF800E51554 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		718F5B1A2AB9B5D800E51554 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		718F5B1C2AB9B5F900E51554 /* SaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveViewController.swift; sourceTree = "<group>"; };
 		718F5B1E2AB9B61200E51554 /* NotesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesEntity.swift; sourceTree = "<group>"; };
+		718F5B2C2AB9BD7300E51554 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		718F5B2E2AB9BFF800E51554 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 				718F5B062AB9B3D600E51554 /* Notes_Home */,
 				718F5B082AB9B3FE00E51554 /* Notes_Details */,
 				718F5AFF2AB9B22B00E51554 /* Info.plist */,
+				718F5B2E2AB9BFF800E51554 /* GoogleService-Info.plist */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 		718F5B192AB9B4EB00E51554 /* TablewViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				718F5B2C2AB9BD7300E51554 /* TableViewCell.swift */,
 			);
 			path = TablewViewCell;
 			sourceTree = "<group>";
@@ -336,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				718F5AFE2AB9B22B00E51554 /* LaunchScreen.storyboard in Resources */,
+				718F5B2F2AB9BFF800E51554 /* GoogleService-Info.plist in Resources */,
 				718F5AFB2AB9B22B00E51554 /* Assets.xcassets in Resources */,
 				718F5AF92AB9B22900E51554 /* Main.storyboard in Resources */,
 			);
@@ -353,6 +360,7 @@
 				718F5AF22AB9B22900E51554 /* AppDelegate.swift in Sources */,
 				718F5AF42AB9B22900E51554 /* SceneDelegate.swift in Sources */,
 				718F5B1F2AB9B61200E51554 /* NotesEntity.swift in Sources */,
+				718F5B2D2AB9BD7300E51554 /* TableViewCell.swift in Sources */,
 				718F5B1B2AB9B5D800E51554 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
