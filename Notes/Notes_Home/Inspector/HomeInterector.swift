@@ -38,7 +38,7 @@ class HomeInterector : PresenterToInterectorHomeProtocol {
                         let notes_title = d["notes_title"] as? String ?? ""
                         let notes_detail = d["notes_detail"] as? String ?? ""
                         
-                        if notes_detail.lowercased().contains(searchWord.lowercased()){
+                        if notes_detail.lowercased().contains(searchWord.lowercased()) || notes_title.lowercased().contains(searchWord.lowercased()) {
                             let note = Notes(notes_id: notes_id, notes_title: notes_title, notes_detail: notes_detail)
                             list.append(note)
                         }
