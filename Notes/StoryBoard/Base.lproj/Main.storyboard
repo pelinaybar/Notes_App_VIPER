@@ -47,6 +47,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.98835128549999995" green="0.98437052970000005" blue="0.98018389939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="TS6-ok-tqK" secondAttribute="bottom" constant="5" id="4Vf-Ze-7Ne"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="TS6-ok-tqK" secondAttribute="trailing" id="7V5-Gk-Q1g"/>
@@ -58,6 +59,10 @@
                                                 <constraint firstItem="ezw-j6-fgM" firstAttribute="top" secondItem="qoS-vj-z2u" secondAttribute="topMargin" constant="5" id="b1N-sc-s7V"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="notes_detail" destination="TS6-ok-tqK" id="rri-KP-4fo"/>
+                                            <outlet property="notes_title" destination="ezw-j6-fgM" id="I9Z-0A-e8J"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -85,7 +90,7 @@
                     <connections>
                         <outlet property="notesTableView" destination="oNG-br-qqX" id="Mad-tw-SSr"/>
                         <outlet property="searchBar" destination="seA-yf-4Rq" id="elp-X1-wBy"/>
-                        <segue destination="i1E-rm-Jwp" kind="show" id="FhO-lH-Tip"/>
+                        <segue destination="i1E-rm-Jwp" kind="show" identifier="toNoteDetails" id="FhO-lH-Tip"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -117,42 +122,50 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tLc-8M-e5d">
-                                <rect key="frame" x="40" y="294" width="313" height="366"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X6V-iC-b5a">
+                                <rect key="frame" x="40" y="294" width="313" height="524"/>
+                                <color key="backgroundColor" cyan="0.01" magenta="0.75522117549870293" yellow="0.76697119887994258" black="0.70812722020501262" alpha="0.02" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AtD-34-M2M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="X6V-iC-b5a" firstAttribute="top" secondItem="AtD-34-M2M" secondAttribute="top" constant="139" id="14G-VY-zF5"/>
                             <constraint firstItem="AtD-34-M2M" firstAttribute="trailing" secondItem="TzX-Rr-fjx" secondAttribute="trailing" constant="45" id="1u2-dd-oab"/>
-                            <constraint firstItem="tLc-8M-e5d" firstAttribute="top" secondItem="MdF-ws-4Ea" secondAttribute="topMargin" constant="139" id="4qJ-TB-hn3"/>
                             <constraint firstItem="AtD-34-M2M" firstAttribute="trailing" secondItem="eiL-tj-u7r" secondAttribute="trailing" constant="45" id="7GS-2f-7gW"/>
                             <constraint firstItem="eiL-tj-u7r" firstAttribute="top" secondItem="AtD-34-M2M" secondAttribute="top" constant="20" id="AfT-zg-m3I"/>
                             <constraint firstItem="AtD-34-M2M" firstAttribute="trailing" secondItem="yET-II-Umn" secondAttribute="trailing" constant="45" id="J4k-V9-vZv"/>
                             <constraint firstItem="TzX-Rr-fjx" firstAttribute="top" secondItem="MdF-ws-4Ea" secondAttribute="topMargin" constant="107" id="MKc-lE-nEN"/>
-                            <constraint firstItem="tLc-8M-e5d" firstAttribute="leading" secondItem="AtD-34-M2M" secondAttribute="leading" constant="40" id="N00-BI-5sQ"/>
                             <constraint firstAttribute="bottomMargin" secondItem="yET-II-Umn" secondAttribute="bottom" constant="576" id="R7N-XN-2Hj"/>
                             <constraint firstAttribute="bottomMargin" secondItem="TzX-Rr-fjx" secondAttribute="bottom" constant="532" id="Sna-Zg-XbP"/>
                             <constraint firstItem="yET-II-Umn" firstAttribute="top" secondItem="MdF-ws-4Ea" secondAttribute="topMargin" constant="53" id="WJW-jj-N57"/>
+                            <constraint firstItem="X6V-iC-b5a" firstAttribute="leading" secondItem="AtD-34-M2M" secondAttribute="leading" constant="40" id="bYr-fg-NVK"/>
                             <constraint firstItem="eiL-tj-u7r" firstAttribute="leading" secondItem="AtD-34-M2M" secondAttribute="leading" constant="45" id="cs2-B8-dz0"/>
-                            <constraint firstItem="AtD-34-M2M" firstAttribute="trailing" secondItem="tLc-8M-e5d" secondAttribute="trailing" constant="40" id="hCb-4N-QbJ"/>
                             <constraint firstItem="yET-II-Umn" firstAttribute="leading" secondItem="AtD-34-M2M" secondAttribute="leading" constant="45" id="lOo-Uh-fBk"/>
                             <constraint firstAttribute="bottomMargin" secondItem="eiL-tj-u7r" secondAttribute="bottom" constant="618" id="lv8-6W-mRM"/>
+                            <constraint firstItem="AtD-34-M2M" firstAttribute="trailing" secondItem="X6V-iC-b5a" secondAttribute="trailing" constant="40" id="pAH-ax-0kN"/>
+                            <constraint firstItem="AtD-34-M2M" firstAttribute="bottom" secondItem="X6V-iC-b5a" secondAttribute="bottom" id="vcO-En-CKb"/>
                             <constraint firstItem="TzX-Rr-fjx" firstAttribute="leading" secondItem="AtD-34-M2M" secondAttribute="leading" constant="45" id="zJM-QH-XYE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Note Edit" id="pJQ-3N-7tM">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="9b8-WR-yh1"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="9b8-WR-yh1">
+                            <connections>
+                                <action selector="saveButton:" destination="KAc-5A-P4y" id="o3D-84-41j"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="notes_detail" destination="X6V-iC-b5a" id="TvF-rf-IHS"/>
+                        <outlet property="notes_title" destination="yET-II-Umn" id="yXf-LG-1f3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y8c-ih-yXZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1638.9312977099237" y="-7.042253521126761"/>
+            <point key="canvasLocation" x="1652.6717557251907" y="-324.64788732394368"/>
         </scene>
         <!--Note Details-->
         <scene sceneID="0ay-e8-1e6">
@@ -179,12 +192,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hPV-E6-66u">
-                                <rect key="frame" x="40" y="292" width="313" height="366"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vy2-XN-lVZ">
+                                <rect key="frame" x="40" y="294" width="313" height="524"/>
+                                <color key="backgroundColor" red="0.98835128549999995" green="0.98437052970000005" blue="0.98018389939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -192,30 +204,38 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="3yx-qb-weL" secondAttribute="bottom" constant="620" id="4f0-mo-qfX"/>
-                            <constraint firstItem="bbb-cF-QMQ" firstAttribute="trailing" secondItem="hPV-E6-66u" secondAttribute="trailing" constant="40" id="CIc-Ba-Xbl"/>
+                            <constraint firstItem="Vy2-XN-lVZ" firstAttribute="leading" secondItem="bbb-cF-QMQ" secondAttribute="leading" constant="40" id="C5V-g6-iud"/>
+                            <constraint firstItem="Vy2-XN-lVZ" firstAttribute="bottom" secondItem="bbb-cF-QMQ" secondAttribute="bottom" id="E7g-Ur-kVR"/>
                             <constraint firstItem="3yx-qb-weL" firstAttribute="leading" secondItem="bbb-cF-QMQ" secondAttribute="leading" constant="45" id="F0Q-lL-Zkr"/>
                             <constraint firstItem="sQK-rs-7Ne" firstAttribute="top" secondItem="aLY-tP-zNo" secondAttribute="topMargin" constant="51" id="GbR-oa-kYt"/>
                             <constraint firstItem="bbb-cF-QMQ" firstAttribute="trailing" secondItem="3yx-qb-weL" secondAttribute="trailing" constant="40" id="JNo-Za-ld3"/>
                             <constraint firstAttribute="bottomMargin" secondItem="sQK-rs-7Ne" secondAttribute="bottom" constant="578" id="Jn8-70-K5Q"/>
                             <constraint firstItem="bbb-cF-QMQ" firstAttribute="trailing" secondItem="sQK-rs-7Ne" secondAttribute="trailing" constant="45" id="NS1-pQ-BUB"/>
                             <constraint firstAttribute="bottomMargin" secondItem="cmR-vi-2GP" secondAttribute="bottom" constant="534" id="Ram-7n-9p3"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="hPV-E6-66u" secondAttribute="bottom" constant="160" id="RvJ-eN-gdf"/>
                             <constraint firstItem="3yx-qb-weL" firstAttribute="top" secondItem="bbb-cF-QMQ" secondAttribute="top" constant="20" id="TKI-Ft-hW9"/>
+                            <constraint firstItem="Vy2-XN-lVZ" firstAttribute="top" secondItem="aLY-tP-zNo" secondAttribute="topMargin" constant="139" id="Yvf-b5-Qzc"/>
                             <constraint firstItem="cmR-vi-2GP" firstAttribute="top" secondItem="aLY-tP-zNo" secondAttribute="topMargin" constant="105" id="eIM-Te-Spw"/>
-                            <constraint firstItem="hPV-E6-66u" firstAttribute="leading" secondItem="bbb-cF-QMQ" secondAttribute="leading" constant="40" id="ka8-dJ-dQf"/>
-                            <constraint firstItem="hPV-E6-66u" firstAttribute="top" secondItem="aLY-tP-zNo" secondAttribute="topMargin" constant="137" id="p9F-Aa-Wlv"/>
+                            <constraint firstItem="bbb-cF-QMQ" firstAttribute="trailing" secondItem="Vy2-XN-lVZ" secondAttribute="trailing" constant="40" id="pPj-c5-gEN"/>
                             <constraint firstItem="cmR-vi-2GP" firstAttribute="leading" secondItem="bbb-cF-QMQ" secondAttribute="leading" constant="45" id="qIn-jf-z5W"/>
                             <constraint firstItem="bbb-cF-QMQ" firstAttribute="trailing" secondItem="cmR-vi-2GP" secondAttribute="trailing" constant="40" id="z7d-Q5-vsf"/>
                             <constraint firstItem="sQK-rs-7Ne" firstAttribute="leading" secondItem="bbb-cF-QMQ" secondAttribute="leading" constant="45" id="zAR-WQ-n47"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Note Details" id="PcL-BB-6GZ">
-                        <barButtonItem key="rightBarButtonItem" title="Update" id="Gm8-Sf-URV"/>
+                        <barButtonItem key="rightBarButtonItem" title="Update" id="Gm8-Sf-URV">
+                            <connections>
+                                <action selector="updeteButton:" destination="i1E-rm-Jwp" id="8eu-t3-2Ic"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="notes_detail" destination="Vy2-XN-lVZ" id="5GQ-Nc-JSP"/>
+                        <outlet property="notes_title" destination="sQK-rs-7Ne" id="iF2-qL-6aE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5m4-C3-2oW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2354.9618320610684" y="-7.042253521126761"/>
+            <point key="canvasLocation" x="1653" y="318"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lfq-Ik-C4h">

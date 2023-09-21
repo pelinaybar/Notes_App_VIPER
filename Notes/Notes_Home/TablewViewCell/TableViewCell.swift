@@ -2,6 +2,9 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
+    @IBOutlet weak var notes_title: UILabel!
+    @IBOutlet weak var notes_detail: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

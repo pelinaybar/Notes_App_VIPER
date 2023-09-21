@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		714C2CFD2ABC57FB00D19D91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 714C2CFC2ABC57FB00D19D91 /* GoogleService-Info.plist */; };
 		718F5AF22AB9B22900E51554 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718F5AF12AB9B22900E51554 /* AppDelegate.swift */; };
 		718F5AF42AB9B22900E51554 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718F5AF32AB9B22900E51554 /* SceneDelegate.swift */; };
 		718F5AF62AB9B22900E51554 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718F5AF52AB9B22900E51554 /* HomeViewController.swift */; };
@@ -21,11 +22,23 @@
 		718F5B262AB9B6CD00E51554 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 718F5B252AB9B6CD00E51554 /* FirebaseDatabaseSwift */; };
 		718F5B282AB9B6CD00E51554 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 718F5B272AB9B6CD00E51554 /* FirebaseFirestore */; };
 		718F5B2D2AB9BD7300E51554 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718F5B2C2AB9BD7300E51554 /* TableViewCell.swift */; };
-		718F5B2F2AB9BFF800E51554 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 718F5B2E2AB9BFF800E51554 /* GoogleService-Info.plist */; };
 		718F5B312AB9D14C00E51554 /* AlertEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718F5B302AB9D14C00E51554 /* AlertEntity.swift */; };
+		71E523992ABC13F10097E6A8 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E523982ABC13F10097E6A8 /* HomeProtocols.swift */; };
+		71E5239B2ABC24F90097E6A8 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E5239A2ABC24F90097E6A8 /* HomeRouter.swift */; };
+		71E5239D2ABC255F0097E6A8 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E5239C2ABC255F0097E6A8 /* HomePresenter.swift */; };
+		71E523A12ABC260D0097E6A8 /* HomeInterector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E523A02ABC260D0097E6A8 /* HomeInterector.swift */; };
+		71E523A32ABC2BBF0097E6A8 /* SaveRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E523A22ABC2BBF0097E6A8 /* SaveRouter.swift */; };
+		71E523A52ABC2BCD0097E6A8 /* SaveProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E523A42ABC2BCD0097E6A8 /* SaveProtocols.swift */; };
+		71E523A72ABC2BD80097E6A8 /* SavePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E523A62ABC2BD80097E6A8 /* SavePresenter.swift */; };
+		71E523A92ABC2BE40097E6A8 /* SaveInterector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E523A82ABC2BE40097E6A8 /* SaveInterector.swift */; };
+		71E523AB2ABC2BF70097E6A8 /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E523AA2ABC2BF70097E6A8 /* DetailsRouter.swift */; };
+		71E523AD2ABC2C030097E6A8 /* DetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E523AC2ABC2C030097E6A8 /* DetailsProtocols.swift */; };
+		71E523AF2ABC2C100097E6A8 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E523AE2ABC2C100097E6A8 /* DetailsPresenter.swift */; };
+		71E523B32ABC2DFD0097E6A8 /* DetailsInterector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E523B22ABC2DFD0097E6A8 /* DetailsInterector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		714C2CFC2ABC57FB00D19D91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		718F5AEE2AB9B22900E51554 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		718F5AF12AB9B22900E51554 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		718F5AF32AB9B22900E51554 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,8 +51,19 @@
 		718F5B1C2AB9B5F900E51554 /* SaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveViewController.swift; sourceTree = "<group>"; };
 		718F5B1E2AB9B61200E51554 /* NotesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesEntity.swift; sourceTree = "<group>"; };
 		718F5B2C2AB9BD7300E51554 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		718F5B2E2AB9BFF800E51554 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		718F5B302AB9D14C00E51554 /* AlertEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertEntity.swift; sourceTree = "<group>"; };
+		71E523982ABC13F10097E6A8 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		71E5239A2ABC24F90097E6A8 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		71E5239C2ABC255F0097E6A8 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		71E523A02ABC260D0097E6A8 /* HomeInterector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterector.swift; sourceTree = "<group>"; };
+		71E523A22ABC2BBF0097E6A8 /* SaveRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveRouter.swift; sourceTree = "<group>"; };
+		71E523A42ABC2BCD0097E6A8 /* SaveProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveProtocols.swift; sourceTree = "<group>"; };
+		71E523A62ABC2BD80097E6A8 /* SavePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePresenter.swift; sourceTree = "<group>"; };
+		71E523A82ABC2BE40097E6A8 /* SaveInterector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveInterector.swift; sourceTree = "<group>"; };
+		71E523AA2ABC2BF70097E6A8 /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
+		71E523AC2ABC2C030097E6A8 /* DetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsProtocols.swift; sourceTree = "<group>"; };
+		71E523AE2ABC2C100097E6A8 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		71E523B22ABC2DFD0097E6A8 /* DetailsInterector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInterector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,11 +104,11 @@
 				718F5B2B2AB9B76500E51554 /* Images */,
 				718F5B292AB9B72B00E51554 /* StoryBoard */,
 				718F5B0E2AB9B45A00E51554 /* Entity */,
-				718F5B072AB9B3DF00E51554 /* Notes_Save */,
 				718F5B062AB9B3D600E51554 /* Notes_Home */,
+				718F5B072AB9B3DF00E51554 /* Notes_Save */,
 				718F5B082AB9B3FE00E51554 /* Notes_Details */,
 				718F5AFF2AB9B22B00E51554 /* Info.plist */,
-				718F5B2E2AB9BFF800E51554 /* GoogleService-Info.plist */,
+				714C2CFC2ABC57FB00D19D91 /* GoogleService-Info.plist */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -137,6 +161,7 @@
 		718F5B0A2AB9B43000E51554 /* Inspector */ = {
 			isa = PBXGroup;
 			children = (
+				71E523A82ABC2BE40097E6A8 /* SaveInterector.swift */,
 			);
 			path = Inspector;
 			sourceTree = "<group>";
@@ -144,6 +169,7 @@
 		718F5B0B2AB9B43900E51554 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				71E523A62ABC2BD80097E6A8 /* SavePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -151,6 +177,7 @@
 		718F5B0C2AB9B43F00E51554 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				71E523A42ABC2BCD0097E6A8 /* SaveProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -158,6 +185,7 @@
 		718F5B0D2AB9B44800E51554 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				71E523A22ABC2BBF0097E6A8 /* SaveRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -182,6 +210,7 @@
 		718F5B102AB9B48700E51554 /* Inspector */ = {
 			isa = PBXGroup;
 			children = (
+				71E523A02ABC260D0097E6A8 /* HomeInterector.swift */,
 			);
 			path = Inspector;
 			sourceTree = "<group>";
@@ -189,6 +218,7 @@
 		718F5B112AB9B49000E51554 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				71E5239C2ABC255F0097E6A8 /* HomePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -196,6 +226,7 @@
 		718F5B122AB9B49600E51554 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				71E523982ABC13F10097E6A8 /* HomeProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -203,6 +234,7 @@
 		718F5B132AB9B4A500E51554 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				71E5239A2ABC24F90097E6A8 /* HomeRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -218,6 +250,7 @@
 		718F5B152AB9B4B100E51554 /* Inspector */ = {
 			isa = PBXGroup;
 			children = (
+				71E523B22ABC2DFD0097E6A8 /* DetailsInterector.swift */,
 			);
 			path = Inspector;
 			sourceTree = "<group>";
@@ -225,6 +258,7 @@
 		718F5B162AB9B4B900E51554 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				71E523AE2ABC2C100097E6A8 /* DetailsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -232,6 +266,7 @@
 		718F5B172AB9B4BE00E51554 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				71E523AC2ABC2C030097E6A8 /* DetailsProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -239,6 +274,7 @@
 		718F5B182AB9B4C300E51554 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				71E523AA2ABC2BF70097E6A8 /* DetailsRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -345,7 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				718F5AFE2AB9B22B00E51554 /* LaunchScreen.storyboard in Resources */,
-				718F5B2F2AB9BFF800E51554 /* GoogleService-Info.plist in Resources */,
+				714C2CFD2ABC57FB00D19D91 /* GoogleService-Info.plist in Resources */,
 				718F5AFB2AB9B22B00E51554 /* Assets.xcassets in Resources */,
 				718F5AF92AB9B22900E51554 /* Main.storyboard in Resources */,
 			);
@@ -360,12 +396,24 @@
 			files = (
 				718F5AF62AB9B22900E51554 /* HomeViewController.swift in Sources */,
 				718F5B312AB9D14C00E51554 /* AlertEntity.swift in Sources */,
+				71E523A72ABC2BD80097E6A8 /* SavePresenter.swift in Sources */,
 				718F5B1D2AB9B5F900E51554 /* SaveViewController.swift in Sources */,
+				71E523A92ABC2BE40097E6A8 /* SaveInterector.swift in Sources */,
 				718F5AF22AB9B22900E51554 /* AppDelegate.swift in Sources */,
+				71E523992ABC13F10097E6A8 /* HomeProtocols.swift in Sources */,
 				718F5AF42AB9B22900E51554 /* SceneDelegate.swift in Sources */,
 				718F5B1F2AB9B61200E51554 /* NotesEntity.swift in Sources */,
+				71E523AF2ABC2C100097E6A8 /* DetailsPresenter.swift in Sources */,
+				71E523A12ABC260D0097E6A8 /* HomeInterector.swift in Sources */,
 				718F5B2D2AB9BD7300E51554 /* TableViewCell.swift in Sources */,
+				71E523A32ABC2BBF0097E6A8 /* SaveRouter.swift in Sources */,
+				71E523AB2ABC2BF70097E6A8 /* DetailsRouter.swift in Sources */,
 				718F5B1B2AB9B5D800E51554 /* DetailsViewController.swift in Sources */,
+				71E523B32ABC2DFD0097E6A8 /* DetailsInterector.swift in Sources */,
+				71E5239B2ABC24F90097E6A8 /* HomeRouter.swift in Sources */,
+				71E523A52ABC2BCD0097E6A8 /* SaveProtocols.swift in Sources */,
+				71E523AD2ABC2C030097E6A8 /* DetailsProtocols.swift in Sources */,
+				71E5239D2ABC255F0097E6A8 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
